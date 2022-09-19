@@ -21,12 +21,12 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
+            const Positioned(
               left: 20,
               top: 60,
               right: 20,
               child: Padding(
-                padding: const EdgeInsets.all(15.0),
+                padding: EdgeInsets.all(15.0),
                 child: Text(
                   "ETHIO-FOOD RECIPIES",
                   style: TextStyle(
@@ -47,14 +47,14 @@ class SplashScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: ((context) => HomeScreen()),
+                      builder: ((context) => const HomeScreen()),
                     ),
                   );
                 },
                 color: Colors.orange,
-                child: Text(
+                child: const Text(
                   "GET STARTED",
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: 25),
