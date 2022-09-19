@@ -1,9 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:food_recipe_app/detail_screen.dart';
-import 'package:food_recipe_app/main.dart';
 import 'package:food_recipe_app/model/allfoods.dart';
 
 class LunchDishes extends StatelessWidget {

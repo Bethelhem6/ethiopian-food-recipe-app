@@ -1,10 +1,12 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:food_recipe_app/detail_screen.dart';
 import 'package:food_recipe_app/dishes/all_dishes.dart';
 import 'package:food_recipe_app/dishes/breakfast.dart';
 import 'package:food_recipe_app/dishes/dinner.dart';
 import 'package:food_recipe_app/dishes/lunch.dart';
 import 'package:food_recipe_app/model/allfoods.dart';
+import 'package:food_recipe_app/search_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -23,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
     "assets/enkulalfirfr.jpg",
     "assets/tips.jpg",
   ];
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -32,39 +35,39 @@ class _HomeScreenState extends State<HomeScreen> {
           // width: MediaQuery.of(context).size.width,
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 30.0,
-                  vertical: 10,
-                ),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                      enabled: true,
-                      prefixIcon: Icon(
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: Text(
+                      "Ethio-food recipe",
+                      style: TextStyle(
+                        color: Colors.orange,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 30.0,
+                      vertical: 20,
+                    ),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: ((context) => SearchScreen())));
+                      },
+                      child: Icon(
                         Icons.search,
-                        color: Colors.orange[300],
+                        color: Colors.orange,
+                        size: 35,
                       ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.orange.shade800,
-                        ),
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: const BorderSide(
-                          color: Colors.orange,
-                        ),
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      label: const Text(
-                        "Search",
-                        style: TextStyle(
-                          color: Colors.orange,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )),
-                ),
+                    ),
+                  ),
+                ],
               ),
               CarouselSlider.builder(
                 itemCount: images.length,
@@ -117,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     autoPlay: true,
                     height: 150,
                     autoPlayCurve: Curves.fastOutSlowIn,
-                    autoPlayInterval: Duration(seconds: 2),
+                    autoPlayInterval: const Duration(seconds: 2),
                     onPageChanged: (index, reason) => setState(() {
                           activeIndex = index;
                         })),
@@ -125,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
               AnimatedSmoothIndicator(
                 activeIndex: activeIndex,
                 count: images.length,
-                effect: SlideEffect(
+                effect: const SlideEffect(
                   radius: 6,
                   dotHeight: 10,
                   dotWidth: 10,
@@ -157,8 +160,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     AllDishes(),
                     BreakfastDishes(),
-                    LunchDishes(),
-                    DinnerDishes(),
+                    const LunchDishes(),
+                    const DinnerDishes(),
                   ],
                 ),
               ),

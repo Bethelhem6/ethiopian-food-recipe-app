@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:food_recipe_app/home.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -13,24 +12,52 @@ class SplashScreen extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-              height: 800,
+              height: 700,
               decoration: const BoxDecoration(
                 color: Colors.black,
                 image: DecorationImage(
-                  image: AssetImage("assets/tips.jpg"),
-                  fit: BoxFit.contain,
+                  image: AssetImage("assets/sp.jpg"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            Positioned(
+              left: 20,
+              top: 60,
+              right: 20,
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Text(
+                  "ETHIO-FOOD RECIPIES",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 45,
+                  ),
                 ),
               ),
             ),
             Positioned(
               bottom: 60,
-              left: 120,
+              left: 90,
               child: MaterialButton(
-                onPressed: () {},
+                minWidth: 200,
+                height: 70,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: ((context) => HomeScreen()),
+                    ),
+                  );
+                },
                 color: Colors.orange,
                 child: Text(
                   "GET STARTED",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25),
                 ),
               ),
             )
