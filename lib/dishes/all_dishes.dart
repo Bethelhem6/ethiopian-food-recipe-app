@@ -54,20 +54,20 @@ class AllDishes extends StatelessWidget {
                     children: [
                       Text(
                         AllFoods.allfoods[index].title,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       Row(
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.watch_later_outlined,
                             color: Colors.orange,
                           ),
                           Text(
                             AllFoods.allfoods[index].time,
-                            style: TextStyle(fontSize: 17),
+                            style: const TextStyle(fontSize: 17),
                           ),
                         ],
                       ),
