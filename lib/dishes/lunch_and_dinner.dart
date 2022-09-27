@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:food_recipe_app/detail_screen.dart';
 import 'package:food_recipe_app/model/allfoods.dart';
 
-class BreakfastDishes extends StatelessWidget {
-  const BreakfastDishes({Key? key}) : super(key: key);
+class LunchAndDinner extends StatelessWidget {
+  const LunchAndDinner({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: AllFoods.breakfast.length,
+      itemCount: AllFoods.lunchAndDinner.length,
       itemBuilder: (context, index) {
         return SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -18,7 +18,7 @@ class BreakfastDishes extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: ((context) => Details(
-                          foods: AllFoods.breakfast[index],
+                          foods: AllFoods.lunchAndDinner[index],
                         )),
                   ));
             },
@@ -39,7 +39,7 @@ class BreakfastDishes extends StatelessWidget {
                     decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage(
-                            AllFoods.breakfast[index].image,
+                            AllFoods.lunchAndDinner[index].image,
                           ),
                           fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(20),
@@ -53,7 +53,7 @@ class BreakfastDishes extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        AllFoods.breakfast[index].title,
+                        AllFoods.lunchAndDinner[index].title,
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -66,7 +66,7 @@ class BreakfastDishes extends StatelessWidget {
                             color: Colors.orange,
                           ),
                           Text(
-                            AllFoods.breakfast[index].time,
+                            AllFoods.lunchAndDinner[index].time,
                             style: TextStyle(fontSize: 17),
                           ),
                         ],

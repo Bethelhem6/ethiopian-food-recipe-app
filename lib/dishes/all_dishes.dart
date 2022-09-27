@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-
 import 'package:food_recipe_app/detail_screen.dart';
 import 'package:food_recipe_app/model/allfoods.dart';
 
 class AllDishes extends StatelessWidget {
-  AllDishes({
-    Key? key,
-  }) : super(key: key);
+  const AllDishes({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -26,6 +24,7 @@ class AllDishes extends StatelessWidget {
             },
             child: Container(
               height: 100,
+              // width: 100,
               margin: const EdgeInsets.symmetric(
                 horizontal: 10,
                 vertical: 10,
@@ -35,7 +34,7 @@ class AllDishes extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
-                    width: 190,
+                    width: 150,
                     height: 170,
                     decoration: BoxDecoration(
                       image: DecorationImage(
@@ -47,21 +46,18 @@ class AllDishes extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    width: 10,
+                    width: 15,
                   ),
                   Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         AllFoods.allfoods[index].title,
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
-                      ),
-                      const SizedBox(
-                        height: 10,
                       ),
                       Row(
                         children: [
@@ -71,32 +67,37 @@ class AllDishes extends StatelessWidget {
                           ),
                           Text(
                             AllFoods.allfoods[index].time,
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(fontSize: 17),
                           ),
                         ],
                       ),
                       Row(
-                        children: const [
+                        children: [
                           Icon(
                             Icons.star,
-                            color: Colors.orange,
+                            color: Colors.orange[400],
+                            size: 20,
                           ),
                           Icon(
                             Icons.star,
-                            color: Colors.orange,
+                            color: Colors.orange[400],
+                            size: 20,
                           ),
                           Icon(
                             Icons.star,
-                            color: Colors.orange,
+                            color: Colors.orange[400],
+                            size: 20,
                           ),
                           Icon(
                             Icons.star,
-                            color: Colors.orange,
+                            color: Colors.orange[400],
+                            size: 20,
                           ),
                           Icon(
-                            Icons.star_border_outlined,
-                            color: Colors.orange,
-                          )
+                            Icons.star_outline,
+                            color: Colors.orange[400],
+                            size: 20,
+                          ),
                         ],
                       )
                     ],

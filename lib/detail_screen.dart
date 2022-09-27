@@ -9,6 +9,26 @@ class Details extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 100, vertical: 10),
+        child: MaterialButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          color: Colors.orange[300],
+          textColor: Colors.white,
+          child: const Padding(
+            padding: EdgeInsets.all(10.0),
+            child: Text(
+              "Go Back",
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
+      ),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -58,7 +78,7 @@ class Details extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(left: 20.0, top: 20),
+                        padding: const EdgeInsets.only(left: 20.0, top: 20),
                         child: Text(
                           foods.time,
                           style: const TextStyle(fontSize: 18),

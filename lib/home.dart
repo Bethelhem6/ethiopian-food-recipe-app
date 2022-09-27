@@ -1,11 +1,11 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:food_recipe_app/detail_screen.dart';
 import 'package:food_recipe_app/dishes/all_dishes.dart';
 import 'package:food_recipe_app/dishes/breakfast.dart';
-import 'package:food_recipe_app/dishes/dinner.dart';
-import 'package:food_recipe_app/dishes/lunch.dart';
-import 'package:food_recipe_app/model/allfoods.dart';
+
+import 'package:food_recipe_app/dishes/lunch_and_dinner.dart';
+import 'package:food_recipe_app/dishes/other.dart';
+import 'package:food_recipe_app/dishes/vegiterian%20dishes.dart';
 import 'package:food_recipe_app/search_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -19,17 +19,17 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int activeIndex = 0;
   List images = [
-    "assets/ayinet.jpg",
+    "assets/ayinet2.jpg",
     "assets/chechepsa.jpg",
     "assets/gomenBeSiga.jpg",
-    "assets/enkulalfirfr.jpg",
-    "assets/tips.jpg",
+    "assets/doro.jpg",
+    "assets/tibs.jpg",
   ];
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 5,
       child: Scaffold(
         body: SafeArea(
           // width: MediaQuery.of(context).size.width,
@@ -37,8 +37,8 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               Row(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 20.0),
                     child: Text(
                       "Ethio-food recipe",
                       style: TextStyle(
@@ -58,9 +58,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: ((context) => SearchScreen())));
+                                builder: ((context) => const SearchScreen())));
                       },
-                      child: Icon(
+                      child: const Icon(
                         Icons.search,
                         color: Colors.orange,
                         size: 35,
@@ -140,6 +140,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 20,
               ),
               const TabBar(
+                isScrollable: true,
+                labelColor: Colors.orange,
+                labelStyle: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+                unselectedLabelColor: Colors.black,
+                unselectedLabelStyle: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.normal,
+                ),
                 tabs: [
                   Tab(
                     text: "All",
@@ -148,20 +159,24 @@ class _HomeScreenState extends State<HomeScreen> {
                     text: "Breakfast",
                   ),
                   Tab(
-                    text: "Lunch",
+                    text: "Vegetarian",
                   ),
                   Tab(
-                    text: "Dinner",
+                    text: "Lunch & Dinner",
+                  ),
+                  Tab(
+                    text: "Others",
                   ),
                 ],
               ),
-              Expanded(
+              const Expanded(
                 child: TabBarView(
                   children: [
                     AllDishes(),
                     BreakfastDishes(),
-                    const LunchDishes(),
-                    const DinnerDishes(),
+                    VegiterianDishes(),
+                    LunchAndDinner(),
+                    OtherDishes(),
                   ],
                 ),
               ),

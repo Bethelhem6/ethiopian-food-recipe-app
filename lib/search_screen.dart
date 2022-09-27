@@ -71,13 +71,22 @@ class _SearchScreenState extends State<SearchScreen> {
                       child: ListView.builder(
                         itemCount: searchResult.length,
                         itemBuilder: ((context, index) => ListTile(
-                              leading: Image(
-                                image: AssetImage(searchResult[index].image),
+                              leading: Container(
+                                width: 120,
+                                height: 170,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                        searchResult[index].image,
+                                      ),
+                                      fit: BoxFit.cover),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
                               ),
                               title: Text(
                                 searchResult[index].title,
                                 style: TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),

@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:food_recipe_app/detail_screen.dart';
 import 'package:food_recipe_app/model/allfoods.dart';
 
-class DinnerDishes extends StatelessWidget {
-  const DinnerDishes({Key? key}) : super(key: key);
+class OtherDishes extends StatelessWidget {
+  const OtherDishes({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: AllFoods.dinner.length,
+      itemCount: AllFoods.others.length,
       itemBuilder: (context, index) {
         return SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -18,43 +18,45 @@ class DinnerDishes extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: ((context) => Details(
-                          foods: AllFoods.dinner[index],
+                          foods: AllFoods.others[index],
                         )),
                   ));
             },
             child: Container(
               height: 100,
+              // width: 100,
               margin: const EdgeInsets.symmetric(
                 horizontal: 10,
-                vertical: 20,
+                vertical: 10,
               ),
               // color: Colors.yellow,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Container(
-                    width: 190,
+                    width: 150,
                     height: 170,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage(
-                            AllFoods.dinner[index].image,
+                            AllFoods.others[index].image,
                           ),
                           fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                   const SizedBox(
-                    width: 10,
+                    width: 15,
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        AllFoods.dinner[index].title,
+                        AllFoods.others[index].title,
                         style: TextStyle(
                           fontSize: 18,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                       Row(
@@ -64,33 +66,38 @@ class DinnerDishes extends StatelessWidget {
                             color: Colors.orange,
                           ),
                           Text(
-                            AllFoods.dinner[index].time,
-                            style: TextStyle(fontSize: 18),
+                            AllFoods.others[index].time,
+                            style: TextStyle(fontSize: 17),
                           ),
                         ],
                       ),
                       Row(
-                        children: const [
+                        children: [
                           Icon(
                             Icons.star,
-                            color: Colors.orange,
+                            color: Colors.orange[400],
+                            size: 20,
                           ),
                           Icon(
                             Icons.star,
-                            color: Colors.orange,
+                            color: Colors.orange[400],
+                            size: 20,
                           ),
                           Icon(
                             Icons.star,
-                            color: Colors.orange,
+                            color: Colors.orange[400],
+                            size: 20,
                           ),
                           Icon(
                             Icons.star,
-                            color: Colors.orange,
+                            color: Colors.orange[400],
+                            size: 20,
                           ),
                           Icon(
-                            Icons.star_border_outlined,
-                            color: Colors.orange,
-                          )
+                            Icons.star_outline,
+                            color: Colors.orange[400],
+                            size: 20,
+                          ),
                         ],
                       )
                     ],
