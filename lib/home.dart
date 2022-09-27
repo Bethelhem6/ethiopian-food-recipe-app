@@ -48,10 +48,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 30.0,
-                      vertical: 20,
+                  Container(
+                    padding: const EdgeInsets.only(
+                      left: 50.0,
+                      top: 10,
+                      bottom: 10,
                     ),
                     child: GestureDetector(
                       onTap: () {

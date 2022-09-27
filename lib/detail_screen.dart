@@ -47,16 +47,19 @@ class Details extends StatelessWidget {
                 ),
               ),
               centerTitle: true,
-              background: Container(
-                height: 260,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(foods.image),
-                    fit: BoxFit.cover,
-                  ),
-                  borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(50),
-                    bottomRight: const Radius.circular(50),
+              background: Hero(
+                tag: foods.image,
+                child: Container(
+                  height: 260,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(foods.image),
+                      fit: BoxFit.cover,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(50),
+                      bottomRight: const Radius.circular(50),
+                    ),
                   ),
                 ),
               ),

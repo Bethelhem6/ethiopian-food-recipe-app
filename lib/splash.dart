@@ -23,7 +23,7 @@ class SplashScreen extends StatelessWidget {
             ),
             const Positioned(
               left: 20,
-              top: 60,
+              top: 40,
               right: 20,
               child: Padding(
                 padding: EdgeInsets.all(15.0),
@@ -38,7 +38,7 @@ class SplashScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: 60,
+              bottom: 30,
               left: 90,
               child: MaterialButton(
                 minWidth: 200,

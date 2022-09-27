@@ -33,16 +33,19 @@ class VegiterianDishes extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Container(
-                    width: 150,
-                    height: 170,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(
-                            AllFoods.vegetrian[index].image,
-                          ),
-                          fit: BoxFit.cover),
-                      borderRadius: BorderRadius.circular(20),
+                  Hero(
+                    tag: AllFoods.vegetrian[index].image,
+                    child: Container(
+                      width: 150,
+                      height: 170,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(
+                              AllFoods.vegetrian[index].image,
+                            ),
+                            fit: BoxFit.cover),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
                     ),
                   ),
                   const SizedBox(
