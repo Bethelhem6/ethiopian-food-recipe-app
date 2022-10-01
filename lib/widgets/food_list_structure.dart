@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:food_recipe_app/detail_screen.dart';
-import 'package:food_recipe_app/model/allfoods.dart';
+import 'package:food_recipe_app/screens/detail_screen.dart';
 
-class VegiterianDishes extends StatelessWidget {
-  const VegiterianDishes({Key? key}) : super(key: key);
+class FoodsListStructur extends StatelessWidget {
+  const FoodsListStructur({
+    Key? key,
+    required this.food,
+  }) : super(key: key);
+  final food;
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: AllFoods.vegetrian.length,
+      itemCount: food.length,
       itemBuilder: (context, index) {
         return SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -18,7 +21,7 @@ class VegiterianDishes extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: ((context) => Details(
-                          foods: AllFoods.vegetrian[index],
+                          foods: food[index],
                         )),
                   ));
             },
@@ -34,14 +37,14 @@ class VegiterianDishes extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Hero(
-                    tag: AllFoods.vegetrian[index].image,
+                    tag: food[index].image,
                     child: Container(
                       width: 150,
                       height: 170,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage(
-                              AllFoods.vegetrian[index].image,
+                              food[index].image,
                             ),
                             fit: BoxFit.cover),
                         borderRadius: BorderRadius.circular(20),
@@ -56,21 +59,21 @@ class VegiterianDishes extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        AllFoods.vegetrian[index].title,
-                        style: TextStyle(
+                        food[index].title,
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       Row(
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.watch_later_outlined,
                             color: Colors.orange,
                           ),
                           Text(
-                            AllFoods.vegetrian[index].time,
-                            style: TextStyle(fontSize: 17),
+                            food[index].time,
+                            style: const TextStyle(fontSize: 17),
                           ),
                         ],
                       ),
