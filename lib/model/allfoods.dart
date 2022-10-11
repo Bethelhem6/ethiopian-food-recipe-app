@@ -24,7 +24,7 @@ class AllFoods {
     ),
     AllFoods(
         title: "Kitffo",
-        time: "55 mins",
+        time: "30 mins",
         description:
             "1.Cut the beef into thin slices, trim any fat and then mince into very small cubes, preferably by hand, or in a food processor. Set the beef aside, spreading it over a plate.\n" +
                 "2. Melt the kibbeh in a medium skillet over very low heat. Add the mitmita, korerima, koseret and salt and stir with the butter. Then, add the minced beef and mash to mix it with the spiced butter; keep mixing until the beef reaches your desired temperature, 3 to 5 minutes for rare. Serve with farmer's or cottage cheese, Gomen Kitfo and injera.",
@@ -32,8 +32,17 @@ class AllFoods {
         ingredients:
             "2 pounds lean beef, such as boneless knuckle or top round\n1/2 cup kibbeh (seasoned clarified butter) or ghee\n2 tablespoons mitmita (Ethiopian spiced chile blend)\n1/2 teaspoon ground korerima (black cardamom)\n1/4 teaspoon koseret powder (earthy, woodsy dried Ethiopian herb)\n1/4 teaspoon fine salt\nHomemade farmer's or cottage cheese made from low-fat buttermilk, if available, or other cottage cheese, for serving\nGomen Kitfo, recipe follows, for serving\nInjera, for serving"),
     AllFoods(
+      title: "Tomato salad",
+      time: "10 mins",
+      description:
+          "Step 1\nIn a bowl combine and whisk all the ingredients for dressing (black pepper, white wine vinegar and extra virgin olive oil) and set aside.\nStep 2\nIn another bowl, add chopped tomatoes, onions and jalapenos. Combine and pour in above made dressing.\nStep 3\nToss the mixture for 1 minute and serve.",
+      image: "assets/tomato.webp",
+      ingredients:
+          "2 finely chopped jalapeno\n2 tablespoon white wine vinegar\n1 pinch salt\n1 medium chopped Red onion\n1 medium finely chopped Yellow onion\n3 tablespoon extra virgin olive oil\n1 1/2 teaspoon grated ginger\n1 pinch black pepper\n1 medium chopped tomato\n3 large chopped tomato",
+    ),
+    AllFoods(
       title: "Minchet",
-      time: "55 mins",
+      time: "30 mins",
       description:
           "1.Chop the onion and cook it under medium heat until it turn brown, frequently stirring to prevent burning.\n2. Add the oil, frequently stirring.\n3. Add Berbere (still stirring)\n4. Add the garlic-ginger paste (also possible to add at the end)\n5. Cook it for about an hour (more or less as needed), occasionally stirring\n6. Add little hot water while stirring to prevent burning\n7. Add your ground beef and stir it thoroughly. Add little hot water as needed while stirring\n8. Keep stirring for about 15 minutes and add more hot water (to the thickness of the stew you wish) to cook the beef\n9. When you think the beef is well cooked, add the Nitir Kibbeh (spiced butter), and Cardamom and leave it for 5-10 minutes under low heat\n10. Turn the heat off and wait until it cools down a little\n11. The ground beef stew is now ready to be served with Injera (the flat Ethiopian bread). Don’t forget to wash your hands because you are going to eat it with your hand.",
       image: "assets/minchet.jpg",
@@ -56,6 +65,15 @@ class AllFoods {
       image: "assets/dnch.jpg",
       ingredients:
           "1 big red onion (chopped)\n2 cloves of Garlic (chopped)\n2 whole tomato (chopped)/Canned tomato (optional)\n1/4 cup Cooking oil\n3 tbsp. Berbere (spiced red pepper powder)/more or less as desired\n3 big potatoes sliced in small pieces\n2 cups Water\nSalt ( as needed)\n1 tea spoon Black cardamom/ground (optional)",
+    ),
+    AllFoods(
+      title: "Enguday tibs",
+      time: "30 mins",
+      description:
+          "1. Heat butter or oil in a large skillet. Add peppers, onions and tomato. Cook on medium high heat till the vegetables have softened a little, about 4 minutes. Add mushrooms.\n2.Mix all ingredients for spice mix and add to the mushrooms. Turn up heat to high. Sauté for about 3 minutes or till mushrooms are done. Add salt at the end. Garnish with cilantro or parsley.\n3.Serve with rice, bread or Ethiopian Injera.",
+      image: "assets/enguday.jpg",
+      ingredients:
+          "2 Tbsp clarified butter, or olive oil\n1 lg green bell pepper, seeded and cut into strips\n1 lg red onion, peeled and cut into strips\n2 md tomatoes, seeded and diced\n1 lb button mushrooms, quartered\nFOR SPICE MIX (AWAZE)\n2 tsp berbere (see note in description)\n3 clove garlic, minced\n1 tsp lemon juice\nsalt, to taste\nparsley or cilantro, to garnish",
     ),
     AllFoods(
         title: "Alicha kik wet",
@@ -266,7 +284,7 @@ class AllFoods {
             "2 red onions finely minced\n1 tablespoon fresh garlic finely minced\n1/4 cup nitir kibbeh or olive oil\n4 cups of water\n1 teaspoon cardamom\n1 teaspoon black pepper\n1/2 cup of Berbere to taste\n2 lbs of lean lamb meat cut evenly"),
     AllFoods(
       title: "Doro Wot",
-      time: "30 mins",
+      time: "60 mins",
       description:
           "1. In a pot large enough to eventually hold all the ingredients, on medium-low heat, heat the onions and 1/2 cup of the water, stirring occasionally, about 1 to 1 1/2 hours until the onions have turned golden brown.\n2. Add the tomato paste to the pot and cook for 4 to 5 minutes, stirring to incorporate until heated through.\n3. Add the niter kibbeh, berbere, garlic and ginger.\n4. When the niter kibbeh has melted, adjust the heat to low and cook for 1 hour, stirring occasionally.\n5. When the spice-onion mixture has been cooked for 30 minutes, prepare the chicken.\n6. In a medium pot on high heat, add the chicken with just enough water to cover. Bring to a boil and reduce the heat slightly to poach the chicken, about 15 minutes.\n7. Drain the chicken, discarding the cooking liquid.\n8. When the spice-onion mixture has cooked for a total of 1 hour, add the chicken to it and let cook for an additional hour over low heat.\n9. Add the remaining 6 cups of water and stir carefully to incorporate the liquid.\n10. Let it cook, adjusting the heat to a simmer until the sauce thickens, and heats thoroughly for about 15 minutes.\n11. Stir in the cardamom, black pepper, and wine.\n12. Mix in the hard-cooked eggs and cook for 15 minutes.",
       image: "assets/doro.jpg",
@@ -293,7 +311,7 @@ class AllFoods {
     ),
     AllFoods(
       title: "Doro Alicha",
-      time: "30 mins",
+      time: "45 mins",
       description:
           "1. Cook eggs and pierce with a fork to allow the flavor to seep in.\n2. In a heavy enamel or iron stewpot, cook the onions over moderate heat for about 5 minutes or until translucent by adding water as needed.\n3. Add the garlic. Do not let brown or burn.\n4. Add the ginger; continue to saute for 5 more minutes, adding water as needed.\n5. Stir in the niter kibbeh and stir for another 5 minutes until well blended.\n6. Pour in honey wine (optional) or dry white wine, bring to a boil.\n7. Cook briskly, uncovered, for about 5 minutes stirring occasionally.\n8. Gently drop the chicken into the simmering sauce. Carefully stir chicken until coated on all sides (the sauce should cover the chicken) add water as needed.\n9. Reduce heat, cover, and simmer for 10 minutes.\n10. Let cool for 15 minutes and serve with ‘Injera’ and yogurt or Ayeb (soft cheese).",
       image: "assets/doroalicha.jpg",
@@ -491,6 +509,24 @@ class AllFoods {
           "1 big red onion (chopped)\n2 cloves of Garlic (chopped)\n2 whole tomato (chopped)/Canned tomato (optional)\n1/4 cup Cooking oil\n3 tbsp. Berbere (spiced red pepper powder)/more or less as desired\n3 big potatoes sliced in small pieces\n2 cups Water\nSalt ( as needed)\n1 tea spoon Black cardamom/ground (optional)",
     ),
     AllFoods(
+      title: "Tomato salad",
+      time: "10 mins",
+      description:
+          "Step 1\nIn a bowl combine and whisk all the ingredients for dressing (black pepper, white wine vinegar and extra virgin olive oil) and set aside.\nStep 2\nIn another bowl, add chopped tomatoes, onions and jalapenos. Combine and pour in above made dressing.\nStep 3\nToss the mixture for 1 minute and serve.",
+      image: "assets/tomato.webp",
+      ingredients:
+          "2 finely chopped jalapeno\n2 tablespoon white wine vinegar\n1 pinch salt\n1 medium chopped Red onion\n1 medium finely chopped Yellow onion\n3 tablespoon extra virgin olive oil\n1 1/2 teaspoon grated ginger\n1 pinch black pepper\n1 medium chopped tomato\n3 large chopped tomato",
+    ),
+    AllFoods(
+      title: "Enguday tibs",
+      time: "30 mins",
+      description:
+          "1. Heat butter or oil in a large skillet. Add peppers, onions and tomato. Cook on medium high heat till the vegetables have softened a little, about 4 minutes. Add mushrooms.\n2.Mix all ingredients for spice mix and add to the mushrooms. Turn up heat to high. Sauté for about 3 minutes or till mushrooms are done. Add salt at the end. Garnish with cilantro or parsley.\n3.Serve with rice, bread or Ethiopian Injera.",
+      image: "assets/enguday.jpg",
+      ingredients:
+          "2 Tbsp clarified butter, or olive oil\n1 lg green bell pepper, seeded and cut into strips\n1 lg red onion, peeled and cut into strips\n2 md tomatoes, seeded and diced\n1 lb button mushrooms, quartered\nFOR SPICE MIX (AWAZE)\n2 tsp berbere (see note in description)\n3 clove garlic, minced\n1 tsp lemon juice\nsalt, to taste\nparsley or cilantro, to garnish",
+    ),
+    AllFoods(
         title: "Alicha kik wet",
         time: "55 mins",
         description:
@@ -627,7 +663,7 @@ class AllFoods {
     ),
     AllFoods(
         title: "Kitffo",
-        time: "55 mins",
+        time: "30 mins",
         description:
             "1.Cut the beef into thin slices, trim any fat and then mince into very small cubes, preferably by hand, or in a food processor. Set the beef aside, spreading it over a plate.\n" +
                 "2. Melt the kibbeh in a medium skillet over very low heat. Add the mitmita, korerima, koseret and salt and stir with the butter. Then, add the minced beef and mash to mix it with the spiced butter; keep mixing until the beef reaches your desired temperature, 3 to 5 minutes for rare. Serve with farmer's or cottage cheese, Gomen Kitfo and injera.",
@@ -636,7 +672,7 @@ class AllFoods {
             "2 pounds lean beef, such as boneless knuckle or top round\n1/2 cup kibbeh (seasoned clarified butter) or ghee\n2 tablespoons mitmita (Ethiopian spiced chile blend)\n1/2 teaspoon ground korerima (black cardamom)\n1/4 teaspoon koseret powder (earthy, woodsy dried Ethiopian herb)\n1/4 teaspoon fine salt\nHomemade farmer's or cottage cheese made from low-fat buttermilk, if available, or other cottage cheese, for serving\nGomen Kitfo, recipe follows, for serving\nInjera, for serving"),
     AllFoods(
       title: "Minchet",
-      time: "55 mins",
+      time: "5530 mins",
       description:
           "1.Chop the onion and cook it under medium heat until it turn brown, frequently stirring to prevent burning.\n2. Add the oil, frequently stirring.\n3. Add Berbere (still stirring)\n4. Add the garlic-ginger paste (also possible to add at the end)\n5. Cook it for about an hour (more or less as needed), occasionally stirring\n6. Add little hot water while stirring to prevent burning\n7. Add your ground beef and stir it thoroughly. Add little hot water as needed while stirring\n8. Keep stirring for about 15 minutes and add more hot water (to the thickness of the stew you wish) to cook the beef\n9. When you think the beef is well cooked, add the Nitir Kibbeh (spiced butter), and Cardamom and leave it for 5-10 minutes under low heat\n10. Turn the heat off and wait until it cools down a little\n11. The ground beef stew is now ready to be served with Injera (the flat Ethiopian bread). Don’t forget to wash your hands because you are going to eat it with your hand.",
       image: "assets/minchet.jpg",
@@ -673,7 +709,7 @@ class AllFoods {
             "2 red onions finely minced\n1 tablespoon fresh garlic finely minced\n1/4 cup nitir kibbeh or olive oil\n4 cups of water\n1 teaspoon cardamom\n1 teaspoon black pepper\n1/2 cup of Berbere to taste\n2 lbs of lean lamb meat cut evenly"),
     AllFoods(
       title: "Doro Wot",
-      time: "30 mins",
+      time: "60 mins",
       description:
           "1. In a pot large enough to eventually hold all the ingredients, on medium-low heat, heat the onions and 1/2 cup of the water, stirring occasionally, about 1 to 1 1/2 hours until the onions have turned golden brown.\n2. Add the tomato paste to the pot and cook for 4 to 5 minutes, stirring to incorporate until heated through.\n3. Add the niter kibbeh, berbere, garlic and ginger.\n4. When the niter kibbeh has melted, adjust the heat to low and cook for 1 hour, stirring occasionally.\n5. When the spice-onion mixture has been cooked for 30 minutes, prepare the chicken.\n6. In a medium pot on high heat, add the chicken with just enough water to cover. Bring to a boil and reduce the heat slightly to poach the chicken, about 15 minutes.\n7. Drain the chicken, discarding the cooking liquid.\n8. When the spice-onion mixture has cooked for a total of 1 hour, add the chicken to it and let cook for an additional hour over low heat.\n9. Add the remaining 6 cups of water and stir carefully to incorporate the liquid.\n10. Let it cook, adjusting the heat to a simmer until the sauce thickens, and heats thoroughly for about 15 minutes.\n11. Stir in the cardamom, black pepper, and wine.\n12. Mix in the hard-cooked eggs and cook for 15 minutes.",
       image: "assets/doro.jpg",
@@ -700,7 +736,7 @@ class AllFoods {
     ),
     AllFoods(
       title: "Doro Alicha",
-      time: "30 mins",
+      time: "45 mins",
       description:
           "1. Cook eggs and pierce with a fork to allow the flavor to seep in.\n2. In a heavy enamel or iron stewpot, cook the onions over moderate heat for about 5 minutes or until translucent by adding water as needed.\n3. Add the garlic. Do not let brown or burn.\n4. Add the ginger; continue to saute for 5 more minutes, adding water as needed.\n5. Stir in the niter kibbeh and stir for another 5 minutes until well blended.\n6. Pour in honey wine (optional) or dry white wine, bring to a boil.\n7. Cook briskly, uncovered, for about 5 minutes stirring occasionally.\n8. Gently drop the chicken into the simmering sauce. Carefully stir chicken until coated on all sides (the sauce should cover the chicken) add water as needed.\n9. Reduce heat, cover, and simmer for 10 minutes.\n10. Let cool for 15 minutes and serve with ‘Injera’ and yogurt or Ayeb (soft cheese).",
       image: "assets/doroalicha.jpg",
