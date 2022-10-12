@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   const Padding(
                     padding: EdgeInsets.only(left: 20.0, bottom: 20, top: 20),
                     child: Text(
-                      "Habeshan food recipe",
+                      "Habesha food recipe",
                       style: TextStyle(
                         color: Colors.orange,
                         fontSize: 37,

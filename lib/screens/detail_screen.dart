@@ -106,14 +106,14 @@ class Details extends StatelessWidget {
                       const Padding(
                         padding: EdgeInsets.only(left: 20.0, top: 20),
                         child: Text(
-                          "3 serve",
+                          "2 serve",
                           style: TextStyle(fontSize: 23),
                         ),
                       ),
                     ],
                   ),
                   const Padding(
-                    padding: EdgeInsets.only(top: 20, left: 25, bottom: 10),
+                    padding: EdgeInsets.only(top: 20, left: 20, bottom: 10),
                     child: Text(
                       "Ingredients",
                       style: TextStyle(
@@ -124,7 +124,7 @@ class Details extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 25, bottom: 10),
+                    padding: const EdgeInsets.only(left: 20, bottom: 10),
                     child: Text(
                       foods.ingredients,
                       style: TextStyle(

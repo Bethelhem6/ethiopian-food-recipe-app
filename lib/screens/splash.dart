@@ -54,7 +54,7 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Padding(
                 padding: EdgeInsets.all(15.0),
                 child: Text(
-                  "HABESHAN FOOD ",
+                  "HABESHA FOOD ",
                   style: TextStyle(
                     color: Colors.orange,
                     fontWeight: FontWeight.bold,
