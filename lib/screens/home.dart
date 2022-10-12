@@ -33,19 +33,20 @@ class _HomeScreenState extends State<HomeScreen> {
               Row(
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only(left: 20.0),
+                    padding: EdgeInsets.only(left: 20.0, bottom: 20, top: 20),
                     child: Text(
-                      "Ethio-food recipe",
+                      "Habeshan food recipe",
                       style: TextStyle(
                         color: Colors.orange,
-                        fontSize: 30,
+                        fontSize: 37,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
                   Container(
                     padding: const EdgeInsets.only(
-                      left: 50.0,
+                      left: 40.0,
+                      right: 10,
                       top: 10,
                       bottom: 10,
                     ),
@@ -59,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: const Icon(
                         Icons.search,
                         color: Colors.orange,
-                        size: 35,
+                        size: 40,
                       ),
                     ),
                   ),
@@ -73,12 +74,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 options: CarouselOptions(
                     enlargeCenterPage: true,
                     autoPlay: true,
-                    height: 150,
+                    height: 250,
                     autoPlayCurve: Curves.fastOutSlowIn,
                     autoPlayInterval: const Duration(seconds: 2),
                     onPageChanged: (index, reason) => setState(() {
                           activeIndex = index;
                         })),
+              ),
+              const SizedBox(
+                height: 20,
               ),
               AnimatedSmoothIndicator(
                 activeIndex: activeIndex,

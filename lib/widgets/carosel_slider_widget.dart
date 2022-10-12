@@ -32,7 +32,7 @@ class CaroselSlideWidget extends StatelessWidget {
               "What do you want to cook?",
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 20,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -46,7 +46,7 @@ class CaroselSlideWidget extends StatelessWidget {
               "Choose a recipe and be brave, its time to create a master piece!",
               style: TextStyle(
                 color: Colors.grey[200],
-                fontSize: 15,
+                fontSize: 20,
               ),
             ),
           ),

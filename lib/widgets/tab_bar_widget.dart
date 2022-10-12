@@ -7,19 +7,23 @@ class TabBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const TabBar(
+    return TabBar(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 20,
+        vertical: 10,
+      ),
       isScrollable: true,
       labelColor: Colors.orange,
-      labelStyle: TextStyle(
-        fontSize: 20,
+      labelStyle: const TextStyle(
+        fontSize: 28,
         fontWeight: FontWeight.bold,
       ),
-      unselectedLabelColor: Colors.black,
-      unselectedLabelStyle: TextStyle(
-        fontSize: 18,
+      unselectedLabelColor: Colors.grey.shade300,
+      unselectedLabelStyle: const TextStyle(
+        fontSize: 22,
         fontWeight: FontWeight.normal,
       ),
-      tabs: [
+      tabs: const [
         Tab(
           text: "All",
         ),

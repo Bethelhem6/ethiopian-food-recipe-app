@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food_recipe_app/model/allfoods.dart';
 
 import '../bloc/search_bloc.dart';
 import '../widgets/widgets.dart';
@@ -20,11 +19,19 @@ class SearchScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 30.0,
-                    vertical: 10,
+                    vertical: 30,
                   ),
                   child: BlocBuilder<SearchBloc, SearchState>(
                     builder: (context, state) {
                       return TextFormField(
+                        autofocus: true,
+                        onEditingComplete: () {
+                          FocusScopeNode currentFocus = FocusScope.of(context);
+
+                          if (!currentFocus.hasPrimaryFocus) {
+                            currentFocus.unfocus();
+                          }
+                        },
                         onChanged: (value) {
                           context.read<SearchBloc>().add(
                                 OnSearchEvent(input: value),
@@ -34,6 +41,7 @@ class SearchScreen extends StatelessWidget {
                             enabled: true,
                             prefixIcon: Icon(
                               Icons.search,
+                              size: 40,
                               color: Colors.orange[300],
                             ),
                             focusedBorder: OutlineInputBorder(
@@ -52,7 +60,7 @@ class SearchScreen extends StatelessWidget {
                               "Search",
                               style: TextStyle(
                                 color: Colors.orange,
-                                fontSize: 20,
+                                fontSize: 30,
                                 fontWeight: FontWeight.bold,
                               ),
                             )),
@@ -68,7 +76,7 @@ class SearchScreen extends StatelessWidget {
                             state.message,
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 20,
+                              fontSize: 30,
                             ),
                           ))
                         : SearchResult(searchResult: state.searchResult);

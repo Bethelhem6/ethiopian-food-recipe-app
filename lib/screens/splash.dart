@@ -1,8 +1,34 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import './screens.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    startTime();
+  }
+
+  startTime() async {
+    var duration = const Duration(seconds: 3);
+    return Timer(duration, route);
+  }
+
+  route() {
+    Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const HomeScreen(),
+        ));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +38,7 @@ class SplashScreen extends StatelessWidget {
         child: Stack(
           children: [
             Container(
-              height: 700,
+              // height: ,
               decoration: const BoxDecoration(
                 color: Colors.black,
                 image: DecorationImage(
@@ -23,44 +49,47 @@ class SplashScreen extends StatelessWidget {
             ),
             const Positioned(
               left: 20,
-              top: 40,
+              top: 170,
               right: 20,
               child: Padding(
                 padding: EdgeInsets.all(15.0),
                 child: Text(
-                  "ETHIO-FOOD RECIPIES",
+                  "HABESHAN FOOD ",
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.orange,
                     fontWeight: FontWeight.bold,
-                    fontSize: 45,
+                    fontSize: 50,
                   ),
                 ),
               ),
             ),
-            Positioned(
-              bottom: 30,
-              left: 90,
-              child: MaterialButton(
-                minWidth: 200,
-                height: 70,
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: ((context) => const HomeScreen()),
-                    ),
-                  );
-                },
-                color: Colors.orange,
-                child: const Text(
-                  "GET STARTED",
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 25),
+            const Positioned(
+              left: 100,
+              top: 240,
+              right: 20,
+              child: Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Text(
+                  " RECIPIES",
+                  style: TextStyle(
+                    color: Colors.orange,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 50,
+                  ),
                 ),
               ),
-            )
+            ),
+            const Positioned(
+              left: 30,
+              top: 400,
+              right: 20,
+              child: Center(
+                child: CircularProgressIndicator(
+                  backgroundColor: Colors.orange,
+                  strokeWidth: 5,
+                ),
+              ),
+            ),
           ],
         ),
       ),
